@@ -25,11 +25,6 @@ func main() {
 	config.AllowWildcard = true
 	app.Use(cors.New(config))
 
-	//espresso.EspressoApplicationRoutes("/api/espresso", app)
-	//EspressoApplicationRoutes("/api/espresso", app)
-
-	//espresso.EspressoApplicationRoutes("/api/espresso", app)
-
 	espressController.EspressoApplicationRoutes("/api/espresso", app)
 
 	//espressController.EspressoApplicationRoutes("/api/espresso", app)

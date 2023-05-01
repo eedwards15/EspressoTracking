@@ -21,7 +21,7 @@ func (dc *DatabaseContext) NewConnection() (mongo.Client, error) {
 	pass := os.Getenv("DB_PASSWORD")
 	host := os.Getenv("DB_HOST")
 	//port := os.Getenv("DB_PORT")
-	connectionString := fmt.Sprintf("mongodb+srv://%s:%s@%s", user, pass, host)
+	connectionString := fmt.Sprintf("mongodb://%s:%s@%s", user, pass, host)
 
 	var err error
 	dc.client, err = mongo.NewClient(options.Client().ApplyURI(connectionString))
