@@ -27,8 +27,6 @@ func main() {
 
 	espressController.EspressoApplicationRoutes("/api/espresso", app)
 
-	//espressController.EspressoApplicationRoutes("/api/espresso", app)
-
 	serverErr := app.Run(":3001")
 	if serverErr != nil {
 		panic(serverErr)
